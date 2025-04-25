@@ -7,11 +7,11 @@ import logoDex from "./assets/images/logo_dex.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-[50px] flex items-center justify-center rajdhani text-white">
+    <footer className="w-full py-[50px] flex items-center justify-center rajdhani text-white bg-white">
       <div className="flex flex-col gap-2 items-center justify-center">
         <div className="flex gap-2 items-center">
           <a
-            href="https://x.com/BlobjackCoin"
+            href="https://x.com/Lol_coinn"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -23,7 +23,7 @@ const Footer = () => {
             <img src={logoPump} alt="DEX" width={35} height={24} />
           </div>
           <a
-            href="https://t.me/BlobJack"
+            href="https://t.me/lololcoinn"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,8 +35,8 @@ const Footer = () => {
             <img src={logoDex} width={30} height={24} />
           </div>
         </div>
-        <span className="font-boldoa text-2xl reguler text-black">
-          ©BLOBCOIN All rights reserved
+        <span className="text-2xl reguler text-black">
+          ©LOL All rights reserved
         </span>
       </div>
     </footer>

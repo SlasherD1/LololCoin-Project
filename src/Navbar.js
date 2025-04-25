@@ -8,83 +8,96 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "./assets/images/logo.png";
+import logoDex from "./assets/images/logo_dex.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="rajdhani flex justify-between items-center px-8 py-1 text-white absolute top-0 left-0 right-0 w-full z-50 font-boldoa">
+    <nav className="rajdhani flex justify-between items-center px-8 py-5 text-white absolute top-0 left-0 right-0 w-full z-50 font-boldoa">
       <div className="flex items-center gap-2">
-        <img src={logo} alt="Logo" width={70} height={78} />
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-20 h-auto sm:w-24 md:w-28 lg:w-20 xl:w-20"
+        />
       </div>
 
       {/* Desktop menu */}
       <ul className="hidden md:flex items-center gap-8">
         <a
-          href="https://x.com/BlobjackCoin"
+          href="https://t.me/lololcoinn"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2"
         >
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-            <FaXTwitter size={20} color="#A3A3A3" />{" "}
+          <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center">
+            <FaTelegramPlane size={35} color="#ffffff" />
           </div>
-          <span className="text-4xl font-boldoa2">X: LINK</span>
         </a>
+
         <a
-          href="https://t.me/BlobJack"
+          href="https://x.com/Lol_coinn"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2"
         >
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-          <FaTelegramPlane size={20} color="#A3A3A3" />
+          <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center">
+            <FaXTwitter size={35} color="#ffffff" />{" "}
           </div>
-          <span className="text-4xl font-boldoa2">TELEGRAM: LINK</span>
         </a>
+
         <a href="#" className="flex items-center gap-2">
-          <div className="w-10 h-10 flex items-center justify-center">
+          {/* <div className="w-10 h-10 flex items-center justify-center">
             <FaRegChartBar size={40} color="#ffffff" />{" "}
+          </div> */}
+          <div className="min-w-[60px] min-h-[60px] rounded-full flex items-center justify-center overflow-hidden bg-stone-900">
+            <img src={logoDex} width={40} height={24} />
           </div>
-          <span className="text-4xl font-boldoa2">CHART: LINK</span>
         </a>
       </ul>
 
       {/* Mobile toggle */}
       <div className="md:hidden z-50" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
+        {menuOpen ? (
+          <FaTimes size={28} color="#000000" />
+        ) : (
+          <FaBars size={28} color="#000000" />
+        )}
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
         <ul className="absolute top-16 left-0 w-full flex flex-col items-center gap-6 py-6 md:hidden">
           <a
-            href="https://x.com/BlobjackCoin"
+            href="https://t.me/lololcoinn"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2"
           >
-            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-              <FaXTwitter size={20} color="#A3A3A3" />{" "}
+            <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center">
+              <FaTelegramPlane size={35} color="#ffffff" />
             </div>
-            <span className="text-4xl font-boldoa2">X: LINK</span>
           </a>
+
           <a
-            href="https://t.me/BlobJack"
+            href="https://x.com/Lol_coinn"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2"
           >
-            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-              <FaTelegramPlane size={20} color="#A3A3A3" />{" "}
+            <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center">
+              <FaXTwitter size={35} color="#ffffff" />{" "}
             </div>
-            <span className="text-4xl font-boldoa2">TELEGRAM: LINK</span>
           </a>
+
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-              <FaRegChartBar size={20} color="#A3A3A3 bg-black" />{" "}
+            {/* <div className="w-10 h-10 flex items-center justify-center">
+            <FaRegChartBar size={40} color="#ffffff" />{" "}
+          </div> */}
+            <div className="min-w-[60px] min-h-[60px] rounded-full flex items-center justify-center overflow-hidden bg-stone-900">
+              <img src={logoDex} width={40} height={24} />
             </div>
-            <span className="text-4xl font-boldoa2">CHART: LINK</span>
           </a>
         </ul>
       )}
